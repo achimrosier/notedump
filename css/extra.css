@@ -1,0 +1,48 @@
+body {
+    padding: 1rem 3rem;
+  }
+  
+  .note-view {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #DADADA;
+  }
+  
+  .note-list {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #eee;
+    width: 400px;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    border: 1px solid #DADADA;
+  }
+  
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    margin: 0;
+  }
+  
+  .col.view-file {
+    display: flex;
+    width: 250px;
+    padding: 5px 10px;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .col.view, .col.edit, .col.delete {
+    padding: 5px 5px;
+  }
+  
+  .new-note-input {
+    margin: 2rem 0;
+  }
+  
+  .new-number-input {
+    width: 400px;
+  }

@@ -14,7 +14,6 @@ if (isset($_POST['id'])) {  // id is setted when editing existing notes
 file_put_contents('notes/last_note_number.txt', $last_note_number);
 }
 
-
 // Open the notes file
 $file = fopen('notes/' . $note_filename . '.txt', 'a');
 
@@ -26,10 +25,6 @@ fwrite($file, $note . PHP_EOL);
 
 // Close the file
 fclose($file);
-
-
-
-
 
 // Redirect the user back to the main page
 header('Location: index.php');

@@ -1,17 +1,18 @@
 <?php
 
+define('FILEPREFIX',"notedump");
+
+// Get the current date and format for filenam
+$date = new DateTime();
+$formatted_date = $date->format('Ymd_His');
+
 // Get the note ID from the POST request
 if (isset($_POST['id'])) {  // id is setted when editing existing notes
     $note_filename = $_POST['id'];
   	unlink('notes/' . $note_filename . '.txt');
 } else {
-    // Get the last note number
-  $last_note_number = file_get_contents('notes/last_note_number.txt');
-  // Increment the last note number 
-  $last_note_number++;
-  $note_filename = 'NoteDump_' . $last_note_number;
-  // Write the last note number to the file
-file_put_contents('notes/last_note_number.txt', $last_note_number);
+  // note doesn't exist, so create filename 
+  $note_filename = FILEPREFIX . "_" . $formatted_date;
 }
 
 // Open the notes file

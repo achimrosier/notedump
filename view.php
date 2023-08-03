@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1><?php echo $_GET['id']; ?> <a href="edit.php?id=<?php echo $_GET['id']; ?>" class="btn btn-info btn-mini"><i class="icon-edit icon-white"></i></a> <a href="delete.php?id=<?php echo $_GET['id']; ?>" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></a> <a href="index.php" class="btn btn-info btn-mini">Back to the list</a></h1>
+    <h1><?php echo $_GET['id']; ?> <a href="edit.php?id=<?php echo $_GET['id']; ?>" class="btn btn-info btn-mini"><i class="icon-edit icon-white"></i></a> <a href="delete.php?id=<?php echo $_GET['id']; ?>" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></a> <a href="index.php" class="btn btn-success btn-mini">Back to the list</a></h1>
     <div class="note-view">
         <?php
         // Get the note ID from the URL

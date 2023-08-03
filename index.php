@@ -22,15 +22,12 @@
       $title = basename($file, '.txt');
 
       // Print a link to the note
-      if ($title !== 'last_note_number') {
-        echo '<div class="row">
-                        <div class="col view-file">' . $title . '</div>
-                        <div class="col view"><a href="view.php?id=' . $title . '" class="btn btn-success btn-mini"><i class="icon-eye-open icon-white"></i></a></div>
-                        <div class="col edit"><a href="edit.php?id=' . $title . '" class="btn btn-info btn-mini"><i class="icon-edit icon-white"></i></a></div>
-                        <div class="col delete"><a href="delete.php?id=' . $title . '" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></a></div>
-                    </div>';
-      } else {
-      }
+      echo '<div class="row">
+        <div class="col view-file">' . $title . '</div>
+        <div class="col view"><a href="view.php?id=' . $title . '" class="btn btn-success btn-mini"><i class="icon-eye-open icon-white"></i></a></div>
+        <div class="col edit"><a href="edit.php?id=' . $title . '" class="btn btn-info btn-mini"><i class="icon-edit icon-white"></i></a></div>
+        <div class="col delete"><a href="delete.php?id=' . $title . '" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></a></div>
+        </div>';
     }
     ?>
   </div>
@@ -43,18 +40,6 @@
     </form>
   </div>
 
-  <?php
-  $file = fopen('notes/last_note_number.txt', 'r');
-  $current_note_nr = fread($file, filesize('notes/last_note_number.txt'));
-  fclose($file);
-  $current_note_nr++;
-  ?>
-  <div class="new-number-input">
-    <form action="save_note_numer.php" method="post">
-      <input type="text" name="last_note_number" placeholder="next note will be NoteDump_<?php echo $current_note_nr++; ?>">
-      <input type="submit" class="btn btn-outline-secondary" value="change last note number">
-    </form>
-  </div>
 </body>
 
 </html>
